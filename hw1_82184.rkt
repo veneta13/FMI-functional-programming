@@ -16,7 +16,7 @@
   (cond
     [(= (remainder (quotient number (expt 10 power-of-10)) 10) digit) 1]
     [else 0]
-    )
+   )
  )
 
 ; Count how many digits of the number are the right digit 
@@ -42,6 +42,7 @@
 
 ; Tests - Task 1
 
+#|
 (= (sum-counts-iter 1 1) 1)
 (= (sum-counts-iter 5123 1) 19)
 (= (sum-counts-iter 1234 8) 10)
@@ -49,6 +50,7 @@
 (= (sum-counts-iter 65432 6) 11)
 (= (sum-counts-iter 70000 1) 11)
 (= (sum-counts-iter 123321 1) 29)
+|#
 
 ; Task 2
 
@@ -58,7 +60,7 @@
     (cond
     [(> number 9) 2]
     [else 1]
-    )
+     )
   )
 
 ; find current digit and increase by 1
@@ -73,19 +75,22 @@
      [(> (expt 10 digit-index-old) n) new-number]
      [else 
       (iterator
-                (+ new-number (* (digit-transformer n digit-index-old) (expt 10 digit-index-new)))
-                (+ digit-index-old 1)
-                (+ digit-index-new (digit-index-increase (digit-transformer n digit-index-old))))
+            (+ new-number (* (digit-transformer n digit-index-old) (expt 10 digit-index-new)))
+            (+ digit-index-old 1)
+            (+ digit-index-new (digit-index-increase (digit-transformer n digit-index-old)))
+        )
       ]
-    )
+     )
     )
   (iterator 0 0 0)
   )
 
 ; Tests - Task 2
 
+#|
 (= (add-ones 123) 234)
 (= (add-ones 193) 2104)
 (= (add-ones 998) 10109)
 (= (add-ones 9999) 10101010)
+|#
 
