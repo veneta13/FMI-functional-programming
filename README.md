@@ -118,7 +118,7 @@ The algebraic type of **Battle** represents the data for a battle - its name and
 
 Define the following functions:
 
-- function **getSunk :: Database -> [(Name, [Name])]**, which receives as an argument a database and returns the names of all ships sunk in battle, in the form of a list of pairs of the type **(< battle name> , (list of names of ships sunk in this battle>)**
+- function **getSunk :: Database -> [(Name, [Name])]**, which receives as an argument a database and returns the names of all ships sunk in battle, in the form of a list of pairs of the type **(< battle name> , (< list of names of ships sunk in this battle>)**
 
 - function **inBattleAfterDamaged :: Database -> [Name]**, which receives as an argument a database and returns a list of the names of those ships that were damaged in one battle, but later participated in another battle.
 
