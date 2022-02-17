@@ -76,9 +76,9 @@ Define a higher-order procedure **(pad xs)** that accepts a matrix xs and return
 While preparing the presents for Christmas, Santa's elves realized that they had a problem: the presents had to be arranged in a special way in the sleigh so that it could fly in the air. Each gift has a unique number - an integer. The goal is for the absolute values ​​of the differences between the numbers of every two adjacent gifts to occupy all values ​​between 1 and n-1, where n is the number of gifts to order. Although elves can come up with combinations of arrangements, there are too many gifts to judge whether they will be able to arrange them correctly the first time. Help them by defining the predicate **willItFly :: [Int] -> Bool**, which receives an ordinance proposed by the elves and checks if it is valid.
 
 ```haskell
-willItFly [1, 4, 2, 3] ➝ True      -- |1-4|=3,|4-2|=2,|2-3|=1
+willItFly [1, 4, 2, 3] ➝ True      -- |1-4|=3, |4-2|=2, |2-3|=1
 
-willItFly [1, 4, 2, -1, 6] ➝ False -- |1-4|=3,|4-2|=2,|2-(-1)|=3, |-1-6|=7
+willItFly [1, 4, 2, -1, 6] ➝ False -- |1-4|=3, |4-2|=2, |2-(-1)|=3, |-1-6|=7
 ```
 
 #### Task 2
